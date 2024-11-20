@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.leewyatt.rxcontrols.controls.RXAudioSpectrum?>
+<?import com.leewyatt.rxcontrols.controls.RXLrcView?>
+<?import com.leewyatt.rxcontrols.controls.RXMediaProgressBar?>
+<?import com.leewyatt.rxcontrols.controls.RXTranslationButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane stylesheets="@../css/player.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.learnJavaFx.controller.PlayerController">
+   <center>
+      <StackPane>
+         <children>
+            <AnchorPane prefHeight="690.0" prefWidth="1020.0" styleClass="content-pane">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <RXAudioSpectrum layoutX="44.0" layoutY="537.0" styleClass="spectrum-pane" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="553.0" />
+                  <RXMediaProgressBar layoutX="88.0" layoutY="616.0" prefHeight="15.0" prefWidth="349.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="616.0" />
+                  <RXLrcView layoutX="230.0" layoutY="165.0" styleClass="lrc-pane" tipString="" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="80.0" />
+                  <BorderPane layoutX="49.0" layoutY="629.0" prefHeight="60.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="629.0">
+                     <left>
+                        <Label prefHeight="60.0" styleClass="time-label" text="00:00/00:00" BorderPane.alignment="CENTER" />
+                     </left>
+                     <center>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <Region prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="svg-btn" />
+                                    <String fx:value="prev-btn" />
+                                 </styleClass>
+                              </StackPane>
+                              <ToggleButton mnemonicParsing="false" styleClass="play-btn">
+                                 <graphic>
+                                    <Region prefHeight="200.0" prefWidth="200.0" />
+                                 </graphic>
+                              </ToggleButton>
+                              <StackPane layoutX="413.0" layoutY="34.0" prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <Region prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="next-btn" />
+                                    <String fx:value="svg-btn" />
+                                 </styleClass>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                     </center>
+                     <right>
+                        <StackPane onMousePressed="#onShowSliderPaneAction" styleClass="show-list-btn" BorderPane.alignment="CENTER">
+                           <children>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </StackPane>
+                     </right>
+                  </BorderPane>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../img/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="49.0" layoutY="22.0" styleClass="logo-label" text="LearnJavaFxQQMusic" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="16.0" />
+                  <HBox alignment="CENTER_RIGHT" layoutX="806.0" layoutY="16.0" prefHeight="54.0" prefWidth="236.0" spacing="10.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="svg-btn" />
+                              <String fx:value="skin-btn" />
+                           </styleClass>
+                        </StackPane>
+                        <ToggleButton mnemonicParsing="false" styleClass="full-btn">
+                           <graphic>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </graphic>
+                        </ToggleButton>
+                        <StackPane layoutX="163.0" layoutY="29.0" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="svg-btn" />
+                              <String fx:value="mini-btn" />
+                           </styleClass>
+                        </StackPane>
+                        <StackPane layoutX="147.0" layoutY="29.0" prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <Region prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="svg-btn" />
+                              <String fx:value="close-btn" />
+                           </styleClass>
+                           <HBox.margin>
+                              <Insets left="2.0" />
+                           </HBox.margin>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="drawPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <BorderPane fx:id="sliderPane" prefHeight="200.0" prefWidth="300.0" styleClass="slider-pane" translateX="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <Pane prefHeight="67.0" prefWidth="300.0" styleClass="slider-pane-bottom" BorderPane.alignment="CENTER">
+                           <children>
+                              <StackPane layoutX="260.0" layoutY="26.0" onMousePressed="#onHideSliderPaneAction">
+                                 <children>
+                                    <Region prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="hide-list-btn" />
+                                    <String fx:value="svg-btn" />
+                                 </styleClass>
+                              </StackPane>
+                           </children>
+                        </Pane>
+                     </bottom>
+                     <center>
+                        <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                     </center>
+                     <top>
+                        <Pane prefHeight="73.0" prefWidth="300.0" styleClass="slider-pane-top" BorderPane.alignment="CENTER">
+                           <children>
+                              <RXTranslationButton layoutX="17.0" layoutY="19.0" prefHeight="24.0" prefWidth="268.0" styleClass="add-btn" text="添加歌曲">
+                                 <graphic>
+                                    <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/add_music.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </RXTranslationButton>
+                           </children>
+                        </Pane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </center>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>
